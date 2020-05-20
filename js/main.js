@@ -1,5 +1,7 @@
 $(document).ready(function () {
     $('.post-wrapper').slick({
+        infinite: true,
+        dots: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,

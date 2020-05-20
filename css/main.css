@@ -82,7 +82,7 @@ nav .nav-item .auth {
 
 /* POST SLIDER */
 .page-wrapper{
-    padding: 100px 0px;
+    padding: 10px 0px;
     background-color: transparent;
 }
 
@@ -95,6 +95,7 @@ nav .nav-item .auth {
 .post-slider {
     background-color: transparent;
     position: relative;
+    
 }
 
 .post-slider .slider-title {
@@ -112,10 +113,15 @@ nav .nav-item .auth {
     
 }
 
+/* .slick-prev:before, .slick-next:before{
+    color:red;
+} */
+
+
 .post-slider .next {
     position: absolute;
     top: 50%;
-    right: 30px;
+    right: 50px;
     font-size: 2em;
     cursor: pointer;
     color: white;
@@ -124,7 +130,7 @@ nav .nav-item .auth {
 .post-slider .prev {
     position: absolute;
     top: 50%;
-    left: 30px;
+    left: 50px;
     font-size: 2em;
     cursor: pointer;
     color: white;
@@ -137,10 +143,6 @@ nav .nav-item .auth {
     overflow: hidden;
     padding: 10px 0px 10px 0px;
 }
-
-/* .slick-prev:before, .slick-next:before{
-    color:red;
-} */
 
 .post-slider .post-wrapper .post {
     width: 300px;
