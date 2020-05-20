@@ -1,0 +1,174 @@
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.page-wrapper a:hover {
+    color: rgb(31, 133, 128);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+nav .navbar-brand span {
+    color: #C70039;
+}
+
+
+/* PAGE INTRO */
+.page-intro {
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.page-intro h1 {
+    text-align: center;
+    color: white;
+    font-size: 6em;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .page-intro {
+        padding: 80px;
+    }
+    .page-intro h1 {
+        font-size: 5em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .page-intro {
+        padding: 50px;
+    }
+    .page-intro h1 {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .page-intro {
+        padding: 50px;
+    }
+    .page-intro h1 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .page-intro {
+        padding: 30px;
+    }
+    .page-intro h1 {
+        font-size: 2em;
+    }
+}
+
+
+/* POST SLIDER */
+.page-wrapper{
+    padding: 100px 0px;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 550px) {
+    .page-wrapper {
+        padding: 20px 0px;
+    }
+}
+
+.post-slider {
+    background-color: transparent;
+    position: relative;
+}
+
+.post-slider .slider-title {
+    text-align: center;
+    margin: 30px auto;
+    font-family: 'Merriweather', serif;
+    /* color: rgb(68, 68, 68); */
+    color: white;
+}
+
+@media only screen and (max-width: 400px) {
+    .post-slider .slider-title {
+        font-size: 2em;
+    }
+    
+}
+
+.post-slider .next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+.post-slider .prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+.post-slider .post-wrapper {
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+
+/* .slick-prev:before, .slick-next:before{
+    color:red;
+} */
+
+.post-slider .post-wrapper .post {
+    width: 300px;
+    height: 330px;
+    margin: 0 10px;
+    display: inline-block;
+    border-radius: 5px;
+    /* background: rgb(253, 240, 240); */
+    background: white;
+    box-shadow: 1rem 1rem 1rem -1rem rgb(36, 36, 36);
+}
+
+.post-slider .post-wrapper .post .post-info {
+    height: 130px;
+    padding: 0px 5px;
+}
+
+.post-slider .post-wrapper .post .post-info h4 {
+    margin: 5px;
+}
+
+
+.post-slider .post-wrapper .post .slider-image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.parallax {
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/16/20/30/dog-5179118_960_720.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
