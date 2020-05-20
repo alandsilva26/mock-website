@@ -42,4 +42,12 @@ $(document).ready(function () {
             // instead of a settings object
         ]
     });
+    $('.mail-form').on('submit', function () {
+        var email = $('input[name="emailAddress"]').val();
+        var message = $.trim($("#messageArea").val())
+        var url = "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=" + email + "&body=" + message;
+        $(location).attr('href', url);
+        // alert(message);
+        return false;
+    });
 });
