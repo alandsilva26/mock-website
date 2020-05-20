@@ -183,3 +183,45 @@ nav .nav-item .auth {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+
+/* FOOTER */
+.page-footer {
+    /* background-color: rgb(24, 24, 53); */
+    background-color: wheat;
+    /* color: rgb(189, 185, 185); */
+    color: grey;
+    padding: 50px;
+}
+
+.page-footer .title {
+    color: black;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.page-footer form {
+    color: black;
+}
+
+.page-footer .submit i {
+    margin: 0px 10px;
+}
+
+.page-footer .mySocial a {
+    padding: 0px;
+    color: rgb(24, 24, 53);
+    display: block;
+}
+
+.page-footer .mySocial a:hover {
+    font-size: 1.1em;
+}
+
+
+.page-footer .mySocial img {
+    width: 20px;
+    margin: 10px;
+    /* background-color: white; */
+}
