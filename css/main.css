@@ -17,8 +17,14 @@ body {
 }
 
 
+/* NAVBAR */
+
 nav .navbar-brand span {
     color: #C70039;
+}
+
+nav .nav-item .auth {
+    color: black;
 }
 
 
