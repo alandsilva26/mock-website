@@ -48,7 +48,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./products.html">Products <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Photo Gallery <span class="sr-only">(current)</span></a>
@@ -59,105 +59,12 @@
                         <a class="nav-link" href="./login.html"><span class="auth">Sign in</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./aboutme.html"><span class="auth">About me</span></a>
+                        <a class="nav-link" href="#"><span class="auth">About me</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-
-
-    <main class="register">
-        <section class="auth">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-sm-12 col-md-4">
-                        <h1>
-                            Sign in to unlock exiting features!
-                        </h1>
-                        <ul>
-                            <li>adf</li>
-                            <li>adf</li>
-                            <li>adf</li>
-                            <li>adf</li>
-                            <li>adf</li>
-                        </ul>
-                    </div>
-                    <div class="form-wrapper col-sm-12 col-md-5">
-                        <form>
-                            <legend class="form-title">Register</legend>
-                            <hr />
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="firstname">First name</label>
-                                        <input type="text" id="firstname" name="firstname" class="form-control"
-                                            placeholder="eg. Sujoy">
-                                    </div>
-                                    <div class="col">
-                                        <label for="lastname">Last Name</label>
-                                        <input type="text" id="lastname" name="lastname" class="form-control"
-                                            placeholder="eg. Dchuna">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input class="form-control" type="email" id="email" name="email"
-                                    placeholder="name@example.com" required="true">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input class="form-control" type="password" id="password" name="password"
-                                    placeholder="Your password" required="true">
-                            </div>
-                            <div class="form-group">
-                                <label for="passwordConfirm">Confirm Password</label>
-                                <input class="form-control" type="password" id="passwordConfirm" name="passwordConfirm"
-                                    placeholder="Your password again" required="true">
-                            </div>
-                            <div class="form-actions d-flex justify-content-between">
-                                <button button type="button" class="btn btn-outline-dark"
-                                    onclick="window.location.href='../index.html'">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Submit
-                                </button>
-                            </div>
-                        </form>
-                        <div class="switch">
-                            Already have an account?
-                            <span>
-                                <a href="./login.html">
-                                    <h7>Sign in</h7>
-                                </a>
-                            </span>
-                        </div>
-                        <hr />
-                        <div class="social-auth">
-                            <legend class="title">Register via other Accounts</legend>
-                            <div class="item">
-                                <a href="#">
-                                    <img class="icons" src="../media/socialIcons/google512.png" alt="google icon">
-                                    Google Sign in
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="#">
-                                    <img class="icons" src="../media/socialIcons/github512.png" alt="github icon">
-                                    Github Sign in
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="#">
-                                    <img class="icons" src="../media/socialIcons/twitter512.png" alt="twitter icon">
-                                    Twitter Sign in
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
 
     <!-- footer -->
@@ -167,7 +74,9 @@
                 <div class="col-sm-12 col-md-5">
                     <div class="title">Attribution</div>
                     <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
-                        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                    </div>
+
                 </div>
                 <div class="col-sm-12 col-md-4">
                     <div class="title">My Socials</div>
@@ -210,6 +119,7 @@
         </div>
     </footer>
 
+
     <!-- required bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -222,7 +132,16 @@
 
     <!-- slick.js -->
     <script type="text/javascript" src="./js/slick.min.js"></script>
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+    <!-- colcade.js -->
+    <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+
+    <script>
+        var colc = new Colcade('.grid', {
+            columns: '.grid-col',
+            items: '.grid-item'
+        });
+    </script>
 
 
     <!-- custom -->

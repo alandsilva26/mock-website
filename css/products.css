@@ -1,0 +1,102 @@
+/* PRODUCTS */
+
+.categories {
+    background-color: rgb(235, 235, 235);
+    background: rgb(74,221,214);
+    background: linear-gradient(190deg, rgba(74,221,214,1) 11%, rgba(235,235,235,1) 42%);
+    border: 1px solid transparent;
+}
+
+#intro-title {
+    font-family: 'Playfair Display';
+    text-align: center;
+    width: 100%;
+    font-size: 4em;
+    font-weight: 500;
+    color: white;
+    padding: 100px 0 100px 0;
+}
+
+.categories .section1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.categories .section1-item a {
+    display: block;
+    background-color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.categories .section1-item a:hover {
+    /* color: rgb(177, 85, 0); */
+}
+
+.categories .section1-item {
+    /* border: 1px dotted red; */
+    overflow: hidden;
+    padding: 0 10px 0 10px;
+    margin-top: 10px;
+}
+
+.categories .section1-item .title {
+    font-weight: 700;
+    font-size: 1.5em;
+    height: 75px;
+}
+
+.categories .section1-item .image , .categories img {
+    /* padding: 10px; */
+    /* width: 10%; */
+    border-radius: 2px;
+}
+
+.categories .section1-item .label {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+.categories .section1-item .label:hover {
+    text-decoration: underline;
+}
+
+
+.section1-item-grid .col {
+    padding: 0;
+    margin: 0;
+}
+
+.section1-item-grid .container-fluid {
+    width: 100%;
+    /* height: 90%; */
+    height: 100%;
+    padding: 0;
+}
+
+.section1-item-grid .row {
+    height: 40%;
+    padding: 10px;
+}
+
+.section1-item-grid a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.section1-item-grid .col .image {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+.section1-item-grid .title {
+    /* width: 20%; */
+    font-size: 1em;
+}
+
+.section1-item-grid .col {
+    font-size: 0.8em;
+}

@@ -30,17 +30,23 @@ nav .nav-item .auth {
 
 /* PAGE INTRO */
 .page-intro {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    /* margin: 0 auto; */
     /* padding: 100px; */
     padding: 200px;
+    padding: 105px 200px 200px 105px;
     font-family: 'Playfair Display', serif;
 }
 
-.page-intro h1 {
+.page-intro {
+    width: 100%;
     text-align: center;
     color: white;
-    font-size: 6em;
+    font-size: 4em;
+}
+
+.page-intro footer {
+    color: rgb(185, 185, 185);
 }
 
 
@@ -48,7 +54,7 @@ nav .nav-item .auth {
     .page-intro {
         padding: 80px;
     }
-    .page-intro h1 {
+    .page-intro {
         font-size: 5em;
     }
 }
@@ -57,7 +63,7 @@ nav .nav-item .auth {
     .page-intro {
         padding: 50px;
     }
-    .page-intro h1 {
+    .page-intro {
         font-size: 4em;
     }
 }
@@ -66,16 +72,17 @@ nav .nav-item .auth {
     .page-intro {
         padding: 50px;
     }
-    .page-intro h1 {
+    .page-intro  {
         font-size: 3em;
     }
 }
 
 @media only screen and (max-width: 550px) {
     .page-intro {
-        padding: 30px;
+        /* padding: 30px; */
+        padding: 100px 20px 100px 20px;
     }
-    .page-intro h1 {
+    .page-intro  {
         font-size: 2em;
     }
 }
