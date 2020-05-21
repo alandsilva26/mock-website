@@ -52,4 +52,9 @@ $(document).ready(function () {
         // alert(message);
         return false;
     });
+
+    $('.grid').colcade({
+        columns: '.grid-col',
+        items: '.grid-item'
+    });
 });
