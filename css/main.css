@@ -325,3 +325,104 @@ nav .nav-item .auth {
     width: 20px;
     margin: 10px;
 }
+
+
+/* REGISTER */
+.register .auth {
+    background: linear-gradient(336deg, rgb(158, 0, 137),   #23d5ab, #23a6d5,#e73c7e,rgb(241, 241, 40), #ee7752);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 18s ease infinite;
+    -moz-animation: AnimationName 18s ease infinite;
+    animation: AnimationName 18s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.register .auth .form-wrapper .form-title {
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.register .auth .row {
+    padding: 50px 0px 50px 0px;
+}
+
+.register .auth .form-wrapper {
+    background-color: white;
+    border-radius: 1%;
+    padding: 10px 20px 30px 20px;
+    box-shadow:  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.register .auth .social-auth .title {
+    font-size: 1.5em;
+    /* color: rgb(31, 133, 128) */
+    text-align: center;
+}
+
+.register .auth .form-group .row {
+    /* margin: 0px 0px 16px 0px; */
+    padding: 0px;
+}
+
+.register .auth  .switch {
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+}
+
+.register .auth .switch span {
+    color: rgb(117, 79, 255);
+}
+
+.register .auth .form-wrapper .social-auth .item {
+    width: 90%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: red;   */
+    /* border: 1px solid rgb(100, 100, 100); */
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 4px;
+    color: rgb(58, 57, 57);
+}
+
+.register .auth .form-wrapper .social-auth .item:hover {
+    /* color: red; */
+    background-color: rgba(61, 138, 91, 0.2);
+}
+
+.register .auth .form-wrapper .social-auth .item a {
+    text-decoration: none;
+}
+
+.register .auth .form-wrapper .social-auth .item a:hover {
+    text-decoration: none;
+    color: rgb(58, 57, 57);
+}
+
+.register .auth .form-wrapper .social-auth .icons {
+    width: 20px;
+    margin: 10px;
+}

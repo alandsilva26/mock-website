@@ -64,7 +64,7 @@
     </header>
 
 
-    <main class="login">
+    <main class="register">
         <section class="auth">
             <div class="container">
                 <div class="row justify-content-between">
@@ -82,8 +82,22 @@
                     </div>
                     <div class="form-wrapper col-sm-12 col-md-5">
                         <form>
-                            <legend class="form-title">Login</legend>
+                            <legend class="form-title">Register</legend>
                             <hr />
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="firstname">First name</label>
+                                        <input type="text" id="firstname" name="firstname" class="form-control"
+                                            placeholder="eg. Sujoy">
+                                    </div>
+                                    <div class="col">
+                                        <label for="lastname">Last Name</label>
+                                        <input type="text" id="lastname" name="lastname" class="form-control"
+                                            placeholder="eg. Dchuna">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label for="email">Email Address</label>
                                 <input class="form-control" type="email" id="email" name="email"
@@ -106,16 +120,16 @@
                             </div>
                         </form>
                         <div class="switch">
-                            Don't have an account?
+                            Already have an account?
                             <span>
-                                <a href="./register.html">
-                                    <h7>Register</h7>
+                                <a href="./login.html">
+                                    <h7>Sign in</h7>
                                 </a>
                             </span>
                         </div>
                         <hr />
                         <div class="social-auth">
-                            <legend class="title">Sign in via other Accounts</legend>
+                            <legend class="title">Register via other Accounts</legend>
                             <div class="item">
                                 <a href="#">
                                     <img class="icons" src="../media/socialIcons/google512.png" alt="google icon">
