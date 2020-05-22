@@ -1,0 +1,65 @@
+main .row {
+    margin-bottom: 50px;
+}
+
+main a {
+    color: blue;
+}
+
+code {
+    /* padding: 1px; */
+    background: rgba(128, 128, 128, 0.137);
+}
+
+main .title {
+    font-family: 'Playfair Display';
+    font-size: 2.5em;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+main .header {
+    font-family: 'Playfair Display';
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+main .author {
+    color: grey;
+    padding: 10px 0px 20px 0px;
+}
+
+main .author img {
+    /* width: 20px; */
+    border-radius: 50%;
+    width: 50px;
+}
+
+main .name {
+    font-weight: 600;
+    color: black;
+}
+
+main .content img {
+    width: 80%;
+    /* height: 500px; */
+    /* width: 500px; */
+    /* background-color: red; */
+    /* object-fit: cover; */
+    margin: 10px auto;
+}
+
+main .tags {
+    padding: 20px;
+}
+
+main .tags span {
+    background-color: rgba(168, 168, 168, 0.171);
+    /* margin: 10px 10px; */
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 4px;
+    border-radius: 2px;
+    color: rgb(110, 110, 110);
+}

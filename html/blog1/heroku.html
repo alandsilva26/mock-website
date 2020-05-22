@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../favicon.png" type="image/png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+    <!-- fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
+        rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- custom -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <!-- <link rel="stylesheet" href="../../css/gallery.css">
+    <link rel="stylesheet" href="../../css/aboutme.css"> -->
+    <link rel="stylesheet" href="../../css/blog.css">
+
+    <title>Deploying static websites on Heroku</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <a class="navbar-brand" href="../../index.html"><span>Alan</span>Dsilva</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../products.html">Products <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../gallery.html">Photo Gallery <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../login.html"><span class="auth">Sign in</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../aboutme.html"><span class="auth">About me</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="article">
+                            <div class="title">
+                                How to deploy static websites on Heroku
+                            </div>
+                            <div class="author">
+                                <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                Written by
+                                <span class="name">Alan Dsilva</span>
+                            </div>
+                            <div class="content">
+                                Heroku is a cloud platform as a service supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go.
+                                <div class="media">
+                                    <img src="../../media/heroku-logo.jpg" alt="heroku logo">
+                                </div>
+                                <p>
+                                    You cannot deploy static websites like this one on Heroku as each app must run through a build process. 
+                                    The solution to this is that you trick Heroku into thinking that your static website is simply a PHP app.
+                                </p>
+                                
+                                <div class="header">
+                                    Configuration steps
+                                </div>
+                                <p>
+                                    <ol>
+                                        <li>
+                                            You need to add two files to your project directory.
+                                            <ul>
+                                                <li><code>composer.json</code></li>
+                                                <li><code>index.php</code></li>
+                                            </ul>
+                                            If you are running a linux machine this is pretty easy just type <code>touch composer.json index.php</code>
+                                        </li>
+                                        <li>
+                                            Add the following line to <i>index.php</i>
+                                            <code>&lt;?php include_once("index.html"); ?&gt;</code>
+                                            <br>
+                                            This is assuming that you have a file named <i>index.php</i> in your project directory, else name it to your initial website file.
+                                        </li>
+                                        <li>
+                                            Add the following line to <i>composer.json</i> - 
+                                            <code>{}</code>
+                                            Heroku uses the file composer.json for dependency management in PHP projects. This files indicates that your project is written in php and thus is required
+                                        </li>
+                                    </ol>
+                                    That's it your done. <br>
+                                    Publish your changes to the branch that Heroku is watching for deployments and your build should now pass. <br>
+                                    If you followed the inital steps while setting up your heroku account you should be fine. <br>
+                                    <br>
+                                    Of course a better option to host static websites is <a href="https://pages.github.com/">Github Pages</a>
+                                    <div class="media">
+                                        <img src="./githubpages-nobackground.png" alt="github pages">
+                                    </div>
+                                    
+                                    If your site is site is static with just HTML, CSS, media files and some JS this is definitely the option to go with.
+                                    <hr>
+                                    <div class="tags">
+                                        <span>web development</span><span>deployment</span><span>web host</span>
+                                    </div>
+                                    <hr>
+                                </p>
+                            </div>
+                            <div class="footer">
+                                <div class="author">
+                                    <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                    Written by
+                                    <span class="name">Alan Dsilva</span>
+                                </div>
+                                <div class="credits">
+                                    Credit to <a href="https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489">wh1tney</a> for writing the original article.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="page-footer">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <div class="title">Attribution</div>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+                        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                    </div>
+                    <div>Image by <a
+                            href="https://pixabay.com/users/auntmasako-2127108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1317308">マサコ
+                            アーント</a> from <a
+                            href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1317308">Pixabay</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="title">My Socials</div>
+                    <div class="mySocial">
+                        <a href="https://github.com/DeathBringer269"> <img src="../../media/socialIcons/github512.png"
+                                alt="github link">My Github Profile</a>
+                        <a href="https://www.linkedin.com/in/alan-dsilva-289b77170/"> <img
+                                src="../../media/socialIcons/linkedin512.png" alt="Linkedin link">Linkedin</a>
+                        <a href="https://www.instagram.com/alandsilva26/"> <img
+                                src="../../media/socialIcons/instagram512.png" alt="Instagram link">I dont post
+                            anymore.</a>
+                        <a href="https://twitter.com/DeathBringer269"> <img src="../../media/socialIcons/twitter512.png"
+                                alt="twitter link">Tweet me</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="title">Contact Me</div>
+                    <form class="mail-form">
+                        <div class="form-group">
+                            <label for="emailAddress">
+                                Email Address
+                            </label>
+                            <input type="email" name="emailAddress" class="form-control" id="emailAddress"
+                                placeholder="name@example.com" required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="messageArea">
+                                Message
+                            </label>
+                            <textarea name="messageArea" placeholder="Enter your message here" id="messageArea"
+                                cols="33" rows="5" class="form-control"></textarea>
+                        </div>
+                        <div class="submit d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">Send <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- required bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <!-- slick.js -->
+    <script type="text/javascript" src="../../js/slick.min.js"></script>
+
+    <!-- colcade.js -->
+    <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+
+    <script>
+        var colc = new Colcade('.grid', {
+            columns: '.grid-col',
+            items: '.grid-item'
+        });
+    </script>
+
+
+    <!-- custom -->
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
