@@ -1,24 +1,101 @@
+body {
+    /* background-color: rgba(128, 128, 128, 0.411); */
+}
+
+.row {
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
 .bio {
-    border: 1px solid red;
-    height: 500px;
+    /* border: 1px solid red; */
+    /* height: 500px; */
     padding: 0px;
+    border-radius: 2px;
+}
+
+.bio .content {
+    padding-bottom: 20px;
+    font-weight: 500;
+    border-radius: 2px;
 }
 
 .bio .content .media {
-    height: 20%;
-    background-color: blue;
+    height: 110px;
     background-image: url(../media/flowers-rotate.jpg);
-    /* transform: rotate(90deg); */
-    object-fit: contain;
-    width: 100%;
-    /* position: relative; */
+    position: relative;
+    overflow: hidden;
+    content: '';
 }
 
-.bio .media img {
+.bio .img-thumbnail {
     width: 20%;
     border-radius: 50%;
     object-fit: cover;
-    /* position: absolute;
-    top: 10px;
-    left: 10px; */
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    z-index: 2;
+}
+
+
+.bio .content-inner .name {
+    padding: 0px 0px 0px 200px;
+    font-size: 2em;
+    font-weight: 600;
+    /* margin: 10px; */
+}
+
+.bio .content-inner .email {
+    font-size: 1em;
+    color: rgb(71, 71, 71);
+}
+
+.bio .content-inner .email span {
+    color: grey;
+    
+}
+
+.bio .content-inner .address {
+    color: rgb(71, 71, 71);
+    padding: 6px 20px;
+}
+
+.bio .content-inner .status span {
+    display: block;
+    color: grey;
+    font-size: 0.8em;
+}
+
+.bio .content-inner .status img {
+    width: 20px;
+}
+
+.bio .content-inner .status {
+    color: rgb(71, 71, 71);
+    padding: 6px 20px;
+}
+
+.bio .content-inner .about .title {
+    display: block;
+    /* padding: 2px 20px; */
+}
+
+.bio .content-inner .about {
+    padding: 6px 20px;
+    color: rgb(71, 71, 71);
+    font-size: 0.9em;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .bio .img-thumbnail {
+        top: 70px;
+        left: 20px;
+        z-index: 2;
+    }
+    .bio .content-inner .name {
+        padding: 0px 0px 0px 100px;
+        font-size: 1.5em;
+    }
 }

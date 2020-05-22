@@ -17,6 +17,13 @@
     padding: 100px 0 100px 0;
 }
 
+@media only screen and (max-width: 500px) {
+    #intro-title {
+        font-size: 2em;
+        padding: 50px 0 50px 0;
+    }
+}
+
 .categories .section1 {
     margin-top: 10px;
     margin-bottom: 10px;

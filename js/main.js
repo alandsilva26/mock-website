@@ -47,7 +47,7 @@ $(document).ready(function () {
     $('.mail-form').on('submit', function () {
         var email = $('input[name="emailAddress"]').val();
         var message = $.trim($("#messageArea").val())
-        var url = "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=" + email + "&body=" + message;
+        var url = "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=alandsilva2001@gmail.com" + "&body=" + message;
         $(location).attr('href', url);
         // alert(message);
         return false;
