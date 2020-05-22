@@ -27,7 +27,8 @@ img {
 
 @media (max-width: 590px) {
     .intro-header .intro-header-img {
-        height: 40vh;
+        height: 30vh;
+        padding: 50px 0px 0px 0px;
     }
     .intro-header .intro-header-img .title {
         font-weight: 600;
