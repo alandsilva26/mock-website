@@ -1,18 +1,24 @@
 .bio {
     border: 1px solid red;
     height: 500px;
+    padding: 0px;
 }
 
 .bio .content .media {
     height: 20%;
     background-color: blue;
-    background-image: url(../media/flowers.jpg);
+    background-image: url(../media/flowers-rotate.jpg);
     /* transform: rotate(90deg); */
-    object-fit: cover;
+    object-fit: contain;
+    width: 100%;
+    /* position: relative; */
 }
 
-.bio img {
+.bio .media img {
     width: 20%;
     border-radius: 50%;
     object-fit: cover;
+    /* position: absolute;
+    top: 10px;
+    left: 10px; */
 }
