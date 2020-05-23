@@ -11,7 +11,7 @@ body {
     /* border: 1px solid red; */
     /* height: 500px; */
     padding: 0px;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .bio .content {
@@ -26,6 +26,7 @@ body {
     position: relative;
     overflow: hidden;
     content: '';
+    border-radius: 3px;
 }
 
 .bio .img-thumbnail {
@@ -53,7 +54,6 @@ body {
 
 .bio .content-inner .email span {
     color: grey;
-    
 }
 
 .bio .content-inner .address {

@@ -6,6 +6,10 @@ main a {
     color: blue;
 }
 
+main .content {
+    /* color: rgb(63, 63, 63); */
+}
+
 code {
     /* padding: 1px; */
     background: rgba(128, 128, 128, 0.137);
@@ -62,4 +66,9 @@ main .tags span {
     padding: 4px;
     border-radius: 2px;
     color: rgb(110, 110, 110);
+}
+
+main .content .index a {
+    text-decoration: underline;
+    color: black;
 }
