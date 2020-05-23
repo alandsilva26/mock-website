@@ -1,0 +1,67 @@
+#quote {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Playfair Display';
+}
+
+#quote .left {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#quote .left .content, #quote .right .content {
+    padding: 10px;
+}
+
+#quote .right {
+    background-color: rgba(250, 53, 145, 0.267);
+}
+
+#quote .right .content {
+    text-align: center;
+    height: 100%;
+}
+
+#carouselExampleIndicators {
+    min-width: 100px;
+}
+
+@media only screen and (min-width: 768px) {
+    #quote .left {
+        font-size: 4em;
+        letter-spacing: 0.05em;
+        height: 80vh;
+        position: relative;
+    }
+
+    #quote .left .content {
+        padding: 0px;
+    }
+
+    #quote .left .content .quote {
+        text-align: center;
+        width: 150%;
+        position: absolute;
+        z-index: 5;
+        top: 50px;
+        /* left: 180px; */
+    }
+    #quote .right {
+        font-size: 2em;
+        /* flex-direction: column; */
+        background-color: transparent;
+    }
+
+    #quote .right .content {
+        background-color: rgba(250, 53, 145, 0.267);
+        height: 90%;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #quote .right .content blockquote {
+        /* color: red; */
+    }
+}
