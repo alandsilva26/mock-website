@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="../../favicon.png" type="image/png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+    <!-- fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
+        rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- custom -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <!-- <link rel="stylesheet" href="../../css/gallery.css">
+    <link rel="stylesheet" href="../../css/aboutme.css"> -->
+    <link rel="stylesheet" href="../../css/blog.css">
+
+    <title>Arch linux installation guide</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <a class="navbar-brand" href="../../index.html"><span>Alan</span>Dsilva</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../products.html">Products <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../gallery.html">Photo Gallery <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../login.html"><span class="auth">Sign in</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../aboutme.html"><span class="auth">About me</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="article">
+                            <div class="title">
+                                Arch Linux Install Guide Part - 2
+                            </div>
+                            <div class="author">
+                                <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                Written by
+                                <span class="name">Alan Dsilva</span>
+                            </div>
+                            <div class="content">
+                                This is continued from <a href="../blog2/arch.html">Arch Installation part 1</a>
+                                <div class="header">
+                                    Installation steps part 2
+                                </div>
+                                <div class="index">
+                                    <ol>
+                                        <li><b><a href="../blog2/arch.html">Part 1</a></b></li>
+                                        <li><a href="#install">Installing linux base</a></li>
+                                        <li><a href="#fstab">Configure fstab</a></li>
+                                        <li><a href="#chroot">Chroot into installed system</a></li>
+                                        <li><a href="#timezone">Timezone and Localization</a></li>
+                                        <li><a href="#network">Network Configuration</a></li>
+                                        <li><a href="#rootpass">Changing root password</a></li>
+                                        <li><a href="#conn-2">Internet configuration</a></li>
+                                        <li><a href="#bootloader">Installing the boot loader*</a></li>
+                                        <li><a href="#postinstallation">Post installation guide</a></li>
+                                    </ol>
+                                </div>
+                                <div class="header" id="install">Installing packages</div>
+                                <i>Pactrap</i> is a tool which can be uses to install Arch
+                                Use the following command <br>
+                                <code>pacstrap /mnt base base-devel linux linux-firmware</code> <br>
+                                This command will install linux on /mnt but i recommend you install some other packages as well. <br>
+                                <code>packstrap /mnt base base-devel linux linux-firmware networkmanager vim os-prober ntfs-3g</code> <br>
+                                This will take some time to download packages. If you feel the speed is two low try updating your mirror list.
+
+                                <div class="header" id="fstab">Configure fstab</div>
+                                Now it's time to tell your linux system about the partitions that you made.
+                                It's simple as running a single command. <br>
+                                <code>genfstab -U /mnt >> /mnt/etc/fstab</code> <br>
+                                This command should be run after you are done with pacstrap. <br>
+                                To verify <i>fstab</i> use <br>
+                                <code>cat /mnt/etc/fstab</code> <br>
+
+                                <div class="header" id="chroot">Chroot into system</div>
+                                Use command <code>arch-chroot /mnt</code> to enter your system.
+
+                                <div class="header" id="timezone">Timezone and Localization</div>
+                                To set your time zone enter <br>
+                                <code>ln -sf /usr/share/zoneinfo/(choose your timezone by pressing tab) /etc/localtime</code> <br>
+                                In my case my timezone is Asia > Kolkata
+                                <br>
+                                <br>
+                                Then open file <i>locale.gen</i> located in <i>/etc/locale.gen</i> <br> using your prefered text editor. In my case vim <br>
+                                <code>vim /etc/locale.gen</code> <br>
+                                Note that this file must already have some contents. <br>
+                                search for <code>en_US.UTF-8</code> and <code>en_US ISO-8859-1</code> and uncomment those two lines.
+                                This two lines will be around line number #176 and #177 respectively. <br>
+                                After saving and exiting use command <code>locale-gen</code> <br>
+                                <br>
+                                Then open file <i>locale.conf</i>. <br>
+                                <code>vim /etc/locale.conf</code> <br>
+                                Note that this file should be empty. <br>
+                                Type in the following line <code>LANG=en_US.UTF-8</code> <br>
+                                Save the file and exit <br>
+
+                                <div class="header" id="network">Network Config</div>
+                                To set your computer host name open file <i>/etc/hostname</i> <br>
+                                <code>vim /etc/hostname</code> <br>
+                                Type in your host name eg. <code>sujoy</code>
+
+                                <div class="header" id="rootpass">Changing root password</div>
+                                Enter the command <code>passwd</code> <br>
+                                A password prompt must appear. Enter your new root password.
+
+                                <div class="header" id="conn-2">Internet configuration</div>
+                                To ensure that when you boot up your fresh install for the first time you will be able to connect to the internet use the following command. <br>
+                                <code>systemctl enable NetworkManager</code> <br>
+                                Assuming that you installed <i>networkmanager</i> while using pacstrap else first run <code>pacman -S networkmanager</code>
+
+                                <div class="header" id="bootloader">Installing the bootloader *</div>
+                                This is almost the final step and the most important one!! <br>
+                                If you are dual booting with another Operating System then you will need the grub menu to switch OS at boot time. <br>
+                                To install grub use <br>
+                                <code>pacman -S grub</code> <br>
+                                <code>grub-install /dev/sda</code> <br>
+                                <b>Note that this is for BIOS system</b> <br>
+                                <b>Generate grub config</b> <br>
+                                <code>grub-mkconfig -o /boot/grub/grub.cfg</code> <br>
+
+                                <div class="header" id="postinstallation">Post Installtion</div>
+                                Ofcourse before you restart you need to unmount the partitions. 
+                                To do that enter <code>exit</code> <br>
+                                <code>unmount -R /mnt</code> <br>
+                                The <i>-R</i> unsures that it recursively unmounts.
+                                Then you can reboot and remove the bootable drive.  <br>
+                                <code>reboot</code> <br>
+                            </div>
+                            That's it you are done with part-2
+                            <a href="../blog2/arch.html">Go to part-1</a>
+                            Ofcourse there is still a ton of stuff to do before you can actually use your new linux system, but that's something for another day.
+                            <hr>
+                            <div class="tags">
+                                <span>linux</span><span>arch linux</span>
+                            </div>
+                            <hr>
+                            <div class="footer">
+                                <div class="author">
+                                    <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                    Written by
+                                    <span class="name">Alan Dsilva</span>
+                                </div>
+                                <div class="credits">
+                                    Quick commands <a href="https://gist.github.com/DeathBringer269/302dd96b597f2c320255b83bdd7e3b87">here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="page-footer">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <div class="title">Attribution</div>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+                        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                    </div>
+                    <div>Image by <a
+                            href="https://pixabay.com/users/auntmasako-2127108/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1317308">マサコ
+                            アーント</a> from <a
+                            href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1317308">Pixabay</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="title">My Socials</div>
+                    <div class="mySocial">
+                        <a href="https://github.com/DeathBringer269"> <img src="../../media/socialIcons/github512.png"
+                                alt="github link">My Github Profile</a>
+                        <a href="https://www.linkedin.com/in/alan-dsilva-289b77170/"> <img
+                                src="../../media/socialIcons/linkedin512.png" alt="Linkedin link">Linkedin</a>
+                        <a href="https://www.instagram.com/alandsilva26/"> <img
+                                src="../../media/socialIcons/instagram512.png" alt="Instagram link">I dont post
+                            anymore.</a>
+                        <a href="https://twitter.com/DeathBringer269"> <img src="../../media/socialIcons/twitter512.png"
+                                alt="twitter link">Tweet me</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="title">Contact Me</div>
+                    <form class="mail-form">
+                        <div class="form-group">
+                            <label for="emailAddress">
+                                Email Address
+                            </label>
+                            <input type="email" name="emailAddress" class="form-control" id="emailAddress"
+                                placeholder="name@example.com" required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="messageArea">
+                                Message
+                            </label>
+                            <textarea name="messageArea" placeholder="Enter your message here" id="messageArea"
+                                cols="33" rows="5" class="form-control"></textarea>
+                        </div>
+                        <div class="submit d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">Send <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- required bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <!-- slick.js -->
+    <script type="text/javascript" src="../../js/slick.min.js"></script>
+
+    <!-- colcade.js -->
+    <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+
+    <script>
+        var colc = new Colcade('.grid', {
+            columns: '.grid-col',
+            items: '.grid-item'
+        });
+    </script>
+
+
+    <!-- custom -->
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

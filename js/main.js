@@ -57,4 +57,8 @@ $(document).ready(function () {
         columns: '.grid-col',
         items: '.grid-item'
     });
+
+    $('.carousel').carousel({
+        interval: 4000
+      });
 });
