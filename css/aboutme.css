@@ -1,4 +1,5 @@
 body {
+    font-family: 'OpenSans'
     /* background-color: rgba(128, 128, 128, 0.411); */
 }
 
@@ -95,7 +96,45 @@ body {
         z-index: 2;
     }
     .bio .content-inner .name {
-        padding: 0px 0px 0px 100px;
+        padding: 0px 0px 0px 110px;
         font-size: 1.5em;
+    }
+}
+
+#about {
+    padding: 20px;
+    height: 100%;
+    font-family: 'OpenSans';
+    /* font-family: 'Playfair Display'; */
+    color: rgb(71, 71, 71);
+}
+
+#about .title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#about .header {
+    font-size: 0.9em;
+    color: grey;
+    font-weight: 600;
+}
+
+#about a {
+    color: blue;
+}
+
+@media only screen and (max-width: 768px) {
+.bio {
+    box-shadow: red;
+}
+
+.content {
+    box-shadow: none;
+}
+
+    #about {
+        /* box-shadow: 2px 2px red; */
     }
 }
