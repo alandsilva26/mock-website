@@ -10,5 +10,6 @@
 * CSS
 * JS
 * JQuery
+* Bootstrap
 * Slide.js - for carousel effect
-* 
+* Colcade.js - for masonry layout
