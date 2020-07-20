@@ -20,7 +20,9 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
         rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- custom -->
     <link rel="stylesheet" href="../../css/main.css">
     <!-- <link rel="stylesheet" href="../../css/gallery.css">
@@ -45,7 +47,8 @@
                         <a class="nav-link" href="../products.html">Products <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="../gallery.html">Photo Gallery <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../gallery.html">Photo Gallery <span
+                                class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -71,17 +74,24 @@
                                 Arch Linux Install Guide Part - 1
                             </div>
                             <div class="author">
-                                <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4"
+                                    alt="profile picture" class="img-thumbnail">
                                 Written by
                                 <span class="name">Alan Dsilva</span>
                             </div>
                             <div class="content">
-                                Arch linux has been my primary linux distribution for over two years and yet somehow I still haven't got it to work on the first run. Even though it requires hours to set up I have never regretted my descision. I made the switch after my first distro (ubuntu) started to feel a bit sluggish. Ofcourse Arch linux is <b>fast AF</b> but it also allows me to customize every single bit of it (dream come true).
+                                Arch linux has been my primary linux distribution for over two years and yet somehow I
+                                still haven't got it to work on the first run. Even though it requires hours to set up I
+                                have never regretted my descision. I made the switch after my first distro (ubuntu)
+                                started to feel a bit sluggish. Ofcourse Arch linux is <b>fast AF</b> but it also allows
+                                me to customize every single bit of it (dream come true).
                                 <div class="media">
-                                    <img src="https://github.com/DeathBringer269/Trice/raw/master/Pictures/Screenshots/full-20191213-12:05:13.png" alt="sameple distro image">
+                                    <img src="https://github.com/alandsilva26/Trice/raw/master/Pictures/Screenshots/full-20191213-12:05:13.png"
+                                        alt="sameple distro image">
                                 </div>
 
-                                Assuming you already have a bootable Arch linux drive ready, boot the drive and follow the next steps.
+                                Assuming you already have a bootable Arch linux drive ready, boot the drive and follow
+                                the next steps.
                                 <div class="header">
                                     Installation steps part 1
                                 </div>
@@ -97,25 +107,29 @@
                                     </ol>
                                 </div>
                                 <div id="verify-boot" class="header">Verify boot mode</div>
-                                To check if your system is booted in <b>UEFI</b> or <b>BIOS</b> run the following command <br>
+                                To check if your system is booted in <b>UEFI</b> or <b>BIOS</b> run the following
+                                command <br>
                                 <code>ls /sys/firmware/efi/efivars</code> <br>
-                                If the directory does not exist you will get the following output 
+                                If the directory does not exist you will get the following output
                                 <i>ls: cannot access '/sys/firmware/efi/efivars': No such file or directory
                                 </i>. <br>
                                 It means your system is booted in <b>BIOS</b> or <b>CSM</b>
                                 <div class="header" id="conn-1">Connect to the internet</div>
-                                If you have wireless connectivity(like me) assuming your <i>wifi adapter/ network card</i> is plugged in enter the following command. <br>
+                                If you have wireless connectivity(like me) assuming your <i>wifi adapter/ network
+                                    card</i> is plugged in enter the following command. <br>
                                 <code>wifi menu</code> <br>
                                 The following menu should pop up.
                                 <div class="media">
-                                    <img src="https://lh3.googleusercontent.com/proxy/Wo9dTGxOR3CPn3pvtyR-JB3BJ09hfo_Cbbpf6FOT970f_VodTaRYn35Pyijjg5y1AV0MVqQxMH8a68Drasj0jNttwGp_iIeVJGhqAELNt-KCYI6xZnPFz-JQM4758u8LnEl6_L4jPlBEVmxd2lZ2_wSoty-L00gfQUXjpQl1xYpjKeo5klmj0juO" alt="wifi-menu" style="width: 50%; object-fit: cover;">
+                                    <img src="https://lh3.googleusercontent.com/proxy/Wo9dTGxOR3CPn3pvtyR-JB3BJ09hfo_Cbbpf6FOT970f_VodTaRYn35Pyijjg5y1AV0MVqQxMH8a68Drasj0jNttwGp_iIeVJGhqAELNt-KCYI6xZnPFz-JQM4758u8LnEl6_L4jPlBEVmxd2lZ2_wSoty-L00gfQUXjpQl1xYpjKeo5klmj0juO"
+                                        alt="wifi-menu" style="width: 50%; object-fit: cover;">
                                 </div>
                                 Select your <b>SSID</b> enter your password and confirm.
                                 To confirm internet connection enter <br>
                                 <code>ping google.com</code> <br>
                                 If you see a output such as this it means you are connected.
                                 <div class="media">
-                                    <img src="https://lh3.googleusercontent.com/proxy/ndgmJhN118CoS9H4N0coPueojhycDT-HcTLr8dpmzNzwi6cpKnEhcMTEUv9WD9QlYJTeSJaM2jrzamowVF02d30BLuaktMrEPmtjIW8it5JIp6l7GGb65woPsygJM8eyDxDhsRQ" alt="ping google.com" style="width: 60%">
+                                    <img src="https://lh3.googleusercontent.com/proxy/ndgmJhN118CoS9H4N0coPueojhycDT-HcTLr8dpmzNzwi6cpKnEhcMTEUv9WD9QlYJTeSJaM2jrzamowVF02d30BLuaktMrEPmtjIW8it5JIp6l7GGb65woPsygJM8eyDxDhsRQ"
+                                        alt="ping google.com" style="width: 60%">
                                 </div>
                                 Else try troubleshooting network issue or repeat the above steps again.
 
@@ -124,45 +138,51 @@
                                 <code>timedatectl set-ntp true</code>
 
                                 <div class="header" id="partition-disks">Partition disks *</div>
-                                This is the scary part. Now you will be actually changing your physical file system, unless you are running a virtual machine then you must be fine. Partitioning disks requires that you use the appropriate tool <i>cfdisk, fdisk, etc</i>(cfdisk in my case). The commands are pretty easy to follow. Remember to not screw up and do not forget to keep a windows bootable by your side always!!. <br>
-                                Usually you may want to split you arch linux installtion into parts such as <i>home, root,swap and boot </i>
+                                This is the scary part. Now you will be actually changing your physical file system,
+                                unless you are running a virtual machine then you must be fine. Partitioning disks
+                                requires that you use the appropriate tool <i>cfdisk, fdisk, etc</i>(cfdisk in my case).
+                                The commands are pretty easy to follow. Remember to not screw up and do not forget to
+                                keep a windows bootable by your side always!!. <br>
+                                Usually you may want to split you arch linux installtion into parts such as <i>home,
+                                    root,swap and boot </i>
                                 <br>
                                 <b>Common partition configuration</b>
                                 <div class="tabel" style="width: 80%; margin: 0 auto;">
                                     <table class="table table-bordered">
                                         <thead>
-                                          <tr>
-                                            <th scope="col">Mount point</th>
-                                            <th scope="col">Partition</th>
-                                            <th scope="col">Size</th>
-                                          </tr>
+                                            <tr>
+                                                <th scope="col">Mount point</th>
+                                                <th scope="col">Partition</th>
+                                                <th scope="col">Size</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
-                                            <td><code>/boot</code></td>
-                                            <td>/dev/sdaX1</td>
-                                            <td>Minimum <b>200M</b></td>
-                                          </tr>
-                                          <tr>
-                                            <td><code>/swap</code> (optional)</td>
-                                            <td>/dev/sdaX2</td>
-                                            <td>Depends on your RAM size.</td>
-                                          </tr>
-                                          <tr>
-                                            <td><code>/root</code></td>
-                                            <td>/dev/sdaX3</td>
-                                            <td>Minimum 20G</td>
-                                          </tr>
-                                          <tr>
-                                              <td><code>/home</code></td>
-                                              <td>/dev/sdaX4</td>
-                                              <td>Rest of the disk</td>
-                                          </tr>
+                                            <tr>
+                                                <td><code>/boot</code></td>
+                                                <td>/dev/sdaX1</td>
+                                                <td>Minimum <b>200M</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/swap</code> (optional)</td>
+                                                <td>/dev/sdaX2</td>
+                                                <td>Depends on your RAM size.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/root</code></td>
+                                                <td>/dev/sdaX3</td>
+                                                <td>Minimum 20G</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/home</code></td>
+                                                <td>/dev/sdaX4</td>
+                                                <td>Rest of the disk</td>
+                                            </tr>
                                         </tbody>
-                                      </table>
+                                    </table>
                                 </div>
-                                Swap space is optional if you have enough RAM (although it is recommended). I ususally use a SWAP file instead.
-                                But if you are going to need hibernate functionality then swap space is the way to go. 
+                                Swap space is optional if you have enough RAM (although it is recommended). I ususally
+                                use a SWAP file instead.
+                                But if you are going to need hibernate functionality then swap space is the way to go.
 
                                 <div class="header" id="formatting">Formatting the file systems</div>
                                 Take note of the partition name of your drive eg. /dev/sda4, etc.
@@ -188,7 +208,7 @@
                                 <code>mount /dev/sdaX1 /mnt/boot</code> <br>
                                 <b>Mount root</b> <br>
                                 <code>mount /dev/sdaX3 /mnt</code> <br>
-                                <b>Mount home</b>  <br>
+                                <b>Mount home</b> <br>
                                 <code>mount /dev/sdaX4 /mnt/home</code>
                             </div>
                             That's it you are done with part-1
@@ -200,12 +220,14 @@
                             <hr>
                             <div class="footer">
                                 <div class="author">
-                                    <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                    <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4"
+                                        alt="profile picture" class="img-thumbnail">
                                     Written by
                                     <span class="name">Alan Dsilva</span>
                                 </div>
                                 <div class="credits">
-                                    Quick commands <a href="https://gist.github.com/DeathBringer269/302dd96b597f2c320255b83bdd7e3b87">here</a>
+                                    Quick commands <a
+                                        href="https://gist.github.com/alandsilva26/302dd96b597f2c320255b83bdd7e3b87">here</a>
                                 </div>
                             </div>
                         </div>
@@ -233,14 +255,14 @@
                 <div class="col-sm-12 col-md-4">
                     <div class="title">My Socials</div>
                     <div class="mySocial">
-                        <a href="https://github.com/DeathBringer269"> <img src="../../media/socialIcons/github512.png"
+                        <a href="https://github.com/alandsilva26"> <img src="../../media/socialIcons/github512.png"
                                 alt="github link">My Github Profile</a>
                         <a href="https://www.linkedin.com/in/alan-dsilva-289b77170/"> <img
                                 src="../../media/socialIcons/linkedin512.png" alt="Linkedin link">Linkedin</a>
                         <a href="https://www.instagram.com/alandsilva26/"> <img
                                 src="../../media/socialIcons/instagram512.png" alt="Instagram link">I dont post
                             anymore.</a>
-                        <a href="https://twitter.com/DeathBringer269"> <img src="../../media/socialIcons/twitter512.png"
+                        <a href="https://twitter.com/alandsilva26"> <img src="../../media/socialIcons/twitter512.png"
                                 alt="twitter link">Tweet me</a>
                     </div>
                 </div>

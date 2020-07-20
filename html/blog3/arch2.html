@@ -20,7 +20,9 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
         rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- custom -->
     <link rel="stylesheet" href="../../css/main.css">
     <!-- <link rel="stylesheet" href="../../css/gallery.css">
@@ -45,7 +47,8 @@
                         <a class="nav-link" href="../products.html">Products <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="../gallery.html">Photo Gallery <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../gallery.html">Photo Gallery <span
+                                class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -71,7 +74,8 @@
                                 Arch Linux Install Guide Part - 2
                             </div>
                             <div class="author">
-                                <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4"
+                                    alt="profile picture" class="img-thumbnail">
                                 Written by
                                 <span class="name">Alan Dsilva</span>
                             </div>
@@ -98,9 +102,12 @@
                                 <i>Pactrap</i> is a tool which can be uses to install Arch
                                 Use the following command <br>
                                 <code>pacstrap /mnt base base-devel linux linux-firmware</code> <br>
-                                This command will install linux on /mnt but i recommend you install some other packages as well. <br>
-                                <code>packstrap /mnt base base-devel linux linux-firmware networkmanager vim os-prober ntfs-3g</code> <br>
-                                This will take some time to download packages. If you feel the speed is two low try updating your mirror list.
+                                This command will install linux on /mnt but i recommend you install some other packages
+                                as well. <br>
+                                <code>packstrap /mnt base base-devel linux linux-firmware networkmanager vim os-prober ntfs-3g</code>
+                                <br>
+                                This will take some time to download packages. If you feel the speed is two low try
+                                updating your mirror list.
 
                                 <div class="header" id="fstab">Configure fstab</div>
                                 Now it's time to tell your linux system about the partitions that you made.
@@ -115,14 +122,17 @@
 
                                 <div class="header" id="timezone">Timezone and Localization</div>
                                 To set your time zone enter <br>
-                                <code>ln -sf /usr/share/zoneinfo/(choose your timezone by pressing tab) /etc/localtime</code> <br>
+                                <code>ln -sf /usr/share/zoneinfo/(choose your timezone by pressing tab) /etc/localtime</code>
+                                <br>
                                 In my case my timezone is Asia > Kolkata
                                 <br>
                                 <br>
-                                Then open file <i>locale.gen</i> located in <i>/etc/locale.gen</i> <br> using your prefered text editor. In my case vim <br>
+                                Then open file <i>locale.gen</i> located in <i>/etc/locale.gen</i> <br> using your
+                                prefered text editor. In my case vim <br>
                                 <code>vim /etc/locale.gen</code> <br>
                                 Note that this file must already have some contents. <br>
-                                search for <code>en_US.UTF-8</code> and <code>en_US ISO-8859-1</code> and uncomment those two lines.
+                                search for <code>en_US.UTF-8</code> and <code>en_US ISO-8859-1</code> and uncomment
+                                those two lines.
                                 This two lines will be around line number #176 and #177 respectively. <br>
                                 After saving and exiting use command <code>locale-gen</code> <br>
                                 <br>
@@ -142,13 +152,16 @@
                                 A password prompt must appear. Enter your new root password.
 
                                 <div class="header" id="conn-2">Internet configuration</div>
-                                To ensure that when you boot up your fresh install for the first time you will be able to connect to the internet use the following command. <br>
+                                To ensure that when you boot up your fresh install for the first time you will be able
+                                to connect to the internet use the following command. <br>
                                 <code>systemctl enable NetworkManager</code> <br>
-                                Assuming that you installed <i>networkmanager</i> while using pacstrap else first run <code>pacman -S networkmanager</code>
+                                Assuming that you installed <i>networkmanager</i> while using pacstrap else first run
+                                <code>pacman -S networkmanager</code>
 
                                 <div class="header" id="bootloader">Installing the bootloader *</div>
                                 This is almost the final step and the most important one!! <br>
-                                If you are dual booting with another Operating System then you will need the grub menu to switch OS at boot time. <br>
+                                If you are dual booting with another Operating System then you will need the grub menu
+                                to switch OS at boot time. <br>
                                 To install grub use <br>
                                 <code>pacman -S grub</code> <br>
                                 <code>grub-install /dev/sda</code> <br>
@@ -157,16 +170,17 @@
                                 <code>grub-mkconfig -o /boot/grub/grub.cfg</code> <br>
 
                                 <div class="header" id="postinstallation">Post Installtion</div>
-                                Ofcourse before you restart you need to unmount the partitions. 
+                                Ofcourse before you restart you need to unmount the partitions.
                                 To do that enter <code>exit</code> <br>
                                 <code>unmount -R /mnt</code> <br>
                                 The <i>-R</i> unsures that it recursively unmounts.
-                                Then you can reboot and remove the bootable drive.  <br>
+                                Then you can reboot and remove the bootable drive. <br>
                                 <code>reboot</code> <br>
                             </div>
                             That's it you are done with part-2
                             <a href="../blog2/arch.html">Go to part-1</a>
-                            Ofcourse there is still a ton of stuff to do before you can actually use your new linux system, but that's something for another day.
+                            Ofcourse there is still a ton of stuff to do before you can actually use your new linux
+                            system, but that's something for another day.
                             <hr>
                             <div class="tags">
                                 <span>linux</span><span>arch linux</span>
@@ -174,12 +188,14 @@
                             <hr>
                             <div class="footer">
                                 <div class="author">
-                                    <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                    <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4"
+                                        alt="profile picture" class="img-thumbnail">
                                     Written by
                                     <span class="name">Alan Dsilva</span>
                                 </div>
                                 <div class="credits">
-                                    Quick commands <a href="https://gist.github.com/DeathBringer269/302dd96b597f2c320255b83bdd7e3b87">here</a>
+                                    Quick commands <a
+                                        href="https://gist.github.com/alandsilva26/302dd96b597f2c320255b83bdd7e3b87">here</a>
                                 </div>
                             </div>
                         </div>
@@ -207,14 +223,14 @@
                 <div class="col-sm-12 col-md-4">
                     <div class="title">My Socials</div>
                     <div class="mySocial">
-                        <a href="https://github.com/DeathBringer269"> <img src="../../media/socialIcons/github512.png"
+                        <a href="https://github.com/alandsilva26"> <img src="../../media/socialIcons/github512.png"
                                 alt="github link">My Github Profile</a>
                         <a href="https://www.linkedin.com/in/alan-dsilva-289b77170/"> <img
                                 src="../../media/socialIcons/linkedin512.png" alt="Linkedin link">Linkedin</a>
                         <a href="https://www.instagram.com/alandsilva26/"> <img
                                 src="../../media/socialIcons/instagram512.png" alt="Instagram link">I dont post
                             anymore.</a>
-                        <a href="https://twitter.com/DeathBringer269"> <img src="../../media/socialIcons/twitter512.png"
+                        <a href="https://twitter.com/alandsilva26"> <img src="../../media/socialIcons/twitter512.png"
                                 alt="twitter link">Tweet me</a>
                     </div>
                 </div>

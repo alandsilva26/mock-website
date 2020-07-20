@@ -20,7 +20,9 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
         rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,669;0,700;0,800;0,900;1,400;1,500;1,600;1,669;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- custom -->
     <link rel="stylesheet" href="../../css/main.css">
     <!-- <link rel="stylesheet" href="../../css/gallery.css">
@@ -45,7 +47,8 @@
                         <a class="nav-link" href="../products.html">Products <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="../gallery.html">Photo Gallery <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../gallery.html">Photo Gallery <span
+                                class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -71,70 +74,85 @@
                                 How to deploy static websites on Heroku
                             </div>
                             <div class="author">
-                                <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4"
+                                    alt="profile picture" class="img-thumbnail">
                                 Written by
                                 <span class="name">Alan Dsilva</span>
                             </div>
                             <div class="content">
-                                Heroku is a cloud platform as a service supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go.
+                                Heroku is a cloud platform as a service supporting several programming languages. One of
+                                the first cloud platforms, Heroku has been in development since June 2007, when it
+                                supported only the Ruby programming language, but now supports Java, Node.js, Scala,
+                                Clojure, Python, PHP, and Go.
                                 <div class="media">
                                     <img src="../../media/heroku-logo.jpg" alt="heroku logo">
                                 </div>
                                 <p>
-                                    You cannot deploy static websites like this one on Heroku as each app must run through a build process. 
-                                    The solution to this is that you trick Heroku into thinking that your static website is simply a PHP app.
+                                    You cannot deploy static websites like this one on Heroku as each app must run
+                                    through a build process.
+                                    The solution to this is that you trick Heroku into thinking that your static website
+                                    is simply a PHP app.
                                 </p>
-                                
+
                                 <div class="header">
                                     Configuration steps
                                 </div>
                                 <p>
-                                    <ol>
-                                        <li>
-                                            You need to add two files to your project directory.
-                                            <ul>
-                                                <li><code>composer.json</code></li>
-                                                <li><code>index.php</code></li>
-                                            </ul>
-                                            If you are running a linux machine this is pretty easy just type <code>touch composer.json index.php</code>
-                                        </li>
-                                        <li>
-                                            Add the following line to <i>index.php</i>
-                                            <code>&lt;?php include_once("index.html"); ?&gt;</code>
-                                            <br>
-                                            This is assuming that you have a file named <i>index.php</i> in your project directory, else name it to your initial website file.
-                                        </li>
-                                        <li>
-                                            Add the following line to <i>composer.json</i> - 
-                                            <code>{}</code>
-                                            Heroku uses the file composer.json for dependency management in PHP projects. This files indicates that your project is written in php and thus is required
-                                        </li>
-                                    </ol>
-                                    That's it your done. <br>
-                                    Publish your changes to the branch that Heroku is watching for deployments and your build should now pass. <br>
-                                    If you followed the inital steps while setting up your heroku account you should be fine. <br>
-                                    <br>
-                                    Of course a better option to host static websites is <a href="https://pages.github.com/">Github Pages</a>
-                                    <div class="media">
-                                        <img src="./githubpages-nobackground.png" alt="github pages">
-                                    </div>
-                                    
-                                    If your site is site is static with just HTML, CSS, media files and some JS this is definitely the option to go with.
-                                    <hr>
-                                    <div class="tags">
-                                        <span>web development</span><span>deployment</span><span>web host</span>
-                                    </div>
-                                    <hr>
+                                <ol>
+                                    <li>
+                                        You need to add two files to your project directory.
+                                        <ul>
+                                            <li><code>composer.json</code></li>
+                                            <li><code>index.php</code></li>
+                                        </ul>
+                                        If you are running a linux machine this is pretty easy just type
+                                        <code>touch composer.json index.php</code>
+                                    </li>
+                                    <li>
+                                        Add the following line to <i>index.php</i>
+                                        <code>&lt;?php include_once("index.html"); ?&gt;</code>
+                                        <br>
+                                        This is assuming that you have a file named <i>index.php</i> in your project
+                                        directory, else name it to your initial website file.
+                                    </li>
+                                    <li>
+                                        Add the following line to <i>composer.json</i> -
+                                        <code>{}</code>
+                                        Heroku uses the file composer.json for dependency management in PHP projects.
+                                        This files indicates that your project is written in php and thus is required
+                                    </li>
+                                </ol>
+                                That's it your done. <br>
+                                Publish your changes to the branch that Heroku is watching for deployments and your
+                                build should now pass. <br>
+                                If you followed the inital steps while setting up your heroku account you should be
+                                fine. <br>
+                                <br>
+                                Of course a better option to host static websites is <a
+                                    href="https://pages.github.com/">Github Pages</a>
+                                <div class="media">
+                                    <img src="./githubpages-nobackground.png" alt="github pages">
+                                </div>
+
+                                If your site is site is static with just HTML, CSS, media files and some JS this is
+                                definitely the option to go with.
+                                <hr>
+                                <div class="tags">
+                                    <span>web development</span><span>deployment</span><span>web host</span>
+                                </div>
+                                <hr>
                                 </p>
                             </div>
                             <div class="footer">
                                 <div class="author">
-                                    <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4" alt="profile picture" class="img-thumbnail">
+                                    <img src="https://avatars0.githubusercontent.com/u/47769063?s=460&u=9d1e0b05a782c92b926f89a0ec25502c94225fad&v=4"
+                                        alt="profile picture" class="img-thumbnail">
                                     Written by
                                     <span class="name">Alan Dsilva</span>
                                 </div>
                                 <div class="credits">
-                                    Credit to <a href="https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489">wh1tney</a> for writing the original article.
+                                    Credit to <a href="https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489">wh1tney</a>
+                                    for writing the original article.
                                 </div>
                             </div>
                         </div>
@@ -162,14 +180,14 @@
                 <div class="col-sm-12 col-md-4">
                     <div class="title">My Socials</div>
                     <div class="mySocial">
-                        <a href="https://github.com/DeathBringer269"> <img src="../../media/socialIcons/github512.png"
+                        <a href="https://github.com/alandsilva26"> <img src="../../media/socialIcons/github512.png"
                                 alt="github link">My Github Profile</a>
                         <a href="https://www.linkedin.com/in/alan-dsilva-289b77170/"> <img
                                 src="../../media/socialIcons/linkedin512.png" alt="Linkedin link">Linkedin</a>
                         <a href="https://www.instagram.com/alandsilva26/"> <img
                                 src="../../media/socialIcons/instagram512.png" alt="Instagram link">I dont post
                             anymore.</a>
-                        <a href="https://twitter.com/DeathBringer269"> <img src="../../media/socialIcons/twitter512.png"
+                        <a href="https://twitter.com/alandsilva26"> <img src="../../media/socialIcons/twitter512.png"
                                 alt="twitter link">Tweet me</a>
                     </div>
                 </div>
